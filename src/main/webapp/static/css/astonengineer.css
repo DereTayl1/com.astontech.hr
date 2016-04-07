@@ -1,0 +1,98 @@
+.hidden{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+
+/*FONT AWESOME PADDING*/
+i.fa {
+    padding-right: 2px;
+}
+
+/* EDITING BOOTSWATCH THEME */
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #fac0ba;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #EEEEEE;
+}
+
+.page-header {
+    margin: 20px 0 18px;
+    font-weight: 600;
+}
+
+.logo{
+    max-width: 55%;
+    margin-top: -10px;
+}
+.navbar {
+    margin-bottom: 0px;
+}
+
+.subNav {
+    background: #eeeeee;
+    padding-left: 20px;
+}
+
+.mainSBLink {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+
+/*XSMALL*/
+@media (max-width: 767px){
+    .navHeader {
+        height: 70px;
+    }
+    .mainNavList{
+        font-size: 1.3em;
+    }
+    .navbar-toggle{
+        margin-top: 15px;
+    }
+}
+/*SMALL*/
+@media (min-width: 768px) {
+    .login {
+        margin-right: 10px;
+        margin: 10px;
+    }
+    .mainNavList {
+        margin-top: 10px;
+        margin-left: -100px;
+        font-size: 1.3em;
+    }
+    .mainNav {
+        height: 70px;
+    }
+}
+/*MEDIUM*/
+@media (min-width: 992px) {
+
+
+
+}
+/*LARGE*/
+@media (min-width: 1200px) {
+    .login {
+        margin-right: 10px;
+    }
+    .mainNavList {
+        margin-left: 0px;
+        font-size: 1.4em;
+    }
+
+
+}
+
+
