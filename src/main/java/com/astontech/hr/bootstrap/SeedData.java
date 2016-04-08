@@ -2,8 +2,10 @@ package com.astontech.hr.bootstrap;
 
 import com.astontech.hr.domain.Element;
 import com.astontech.hr.domain.ElementType;
+import com.astontech.hr.domain.VehicleMake;
 import com.astontech.hr.services.ElementService;
 import com.astontech.hr.services.ElementTypeService;
+import com.astontech.hr.services.VehicleMakeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -24,11 +26,30 @@ public class SeedData implements ApplicationListener<ContextRefreshedEvent> {
     @Autowired
     private ElementTypeService elementTypeService;
 
+    @Autowired
+    private VehicleMakeService vehicleMakeService;
+
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
 
         generateElementAndElementTypes();
+
+        generateVehicleMake();
+
+    }
+
+    private void generateVehicleMake(){
+
+        List<VehicleMake> makeList = new ArrayList<>();
+
+        makeList.add(new VehicleMake("Toyota"));
+        makeList.add(new VehicleMake("Nissan"));
+        makeList.add(new VehicleMake("Chevy"));
+        makeList.add(new VehicleMake("Ford"));
+        makeList.add(new VehicleMake("Dodge"));
+
+        vehicleMakeService.saveVehicleMakeList(makeList);
 
     }
 

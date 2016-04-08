@@ -30,13 +30,14 @@
                         <label class="col-lg-2 control-label"><strong class="h4">Vehicle Make:</strong></label>
                         <div class="col-md-8">
                             <%--SELECT DROW DOWN--%>
-                            <select class="form-control">
-                                <option>Toyota</option>
-                                <option>Chevy</option>
-                                <option>Ford</option>
-                                <option>Nissan</option>
-                                <option>Dodge</option>
+                            <select class="form-control" name="vehicleMake">
+                                <option selected value="0"> Select Make </option>
+                            <c:forEach var="make" items="${vehicleMakeList}">
+                                <option value="${make.id}">${make.vehicleMakeName}</option>
+                            </c:forEach>
                             </select>
+
+
                         </div>
                         <div id="selectMakeBtn" class="col-md-2">
                             <a class="btn btn-primary" href="#"><i class="fa fa-check"></i> Select Make</a>
